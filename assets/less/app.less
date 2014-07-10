@@ -1,0 +1,470 @@
+/*!
+ * Roots 6.5.2
+ */
+
+@import "bootstrap/bootstrap.less";
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+html { height:100%; }
+body { height:100%; }
+
+.row {
+   margin-left: 15px;
+   margin-right: 15px;
+}
+
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.headerNonHome{
+      background-color:@brand-main;
+      min-height:115px;
+      z-index: 11;
+      .container{
+         .navbar-brand{
+            color:white;
+            padding-top:20px;
+            font-size:2.0em;
+            .headerLogo{
+               height:75px;
+            }
+         }
+         nav {
+            padding-top:35px;
+            .navbar-nav{
+
+               li {
+                  a {
+                     font-size:1.4em;
+                     color:white;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+.headerHomeOverlay{
+         border-bottom-right-radius:30%;
+        background-color:@brand-main;
+        position: absolute;
+        opacity:.5;
+        width:100%;
+        height:100%;
+         top: 0;
+      left: 0;
+        z-index: -1;
+   }
+   .headerHomeBackground{
+      border-bottom-right-radius:30%;
+      background-image: url(../img/chicago.jpg);
+      background-size: cover;
+      position: absolute;
+        width:100%;
+        height:100%;
+         top: 0;
+      left: 0;
+        z-index:-2;
+   }
+
+.icon-bar{
+   background-color:white;
+   height:4px;
+   width:44px;
+}
+
+.navbar-toggle{
+   padding-top:45px;
+   padding-right: 30px;
+            }
+.banner {
+   border: 1px none transparent;
+   .headerHome{
+      min-height:500px;
+      @media screen and (max-width: 500px) { min-height:450px; }
+      .container{
+         .navbar-brand{
+            padding-top:25px;
+            .headerLogo{
+               height:75px;
+            }
+         }
+         nav {
+            padding-top:35px;
+            .navbar-nav{
+               li {
+                  a {
+                     font-size:1.4em;
+                     color:white;
+                  }
+               }
+            }
+         }
+      }
+      .row {
+         .container{
+            .col-sm-12{
+               margin-bottom:25px;
+               .welcomeText{
+                  color:white;
+                  text-align:center;
+                  margin-top: 6em;
+                  @media screen and (max-width: 500px) { margin-top: 2.5em; }
+                  h1 {
+                     @media screen and (max-width: 992px) { font-size:3.5em; }
+                     @media screen and (max-width: 715px) { font-size:2.5em; }
+                     @media screen and (max-width: 415px) { font-size:2.4em; }
+                     font-size:4em;
+                  }
+                  h2{
+                     @media screen and (max-width: 992px) { font-size:3.5em; }
+                     @media screen and (max-width: 715px) { font-size:2.5em; }
+                     @media screen and (max-width: 415px) { font-size:2.2em; }
+                     font-size:4em;
+                     font-weight:300;
+                  }
+                  h3 {
+                     a {
+                        color:@brand-alternate;
+                     }
+                     @media screen and (max-width: 992px) { font-size:1.3em; }
+                  }
+               }
+            }
+            .form-inline{
+               text-align:center;
+               margin-top:25px;
+               inline:block;
+               .ctaButton {
+                  background-color:@brand-alternate;
+                  color:white;
+               }
+               .form-control{
+                  border: 1px none #ccc;
+                  width:300px;
+                  @media screen and (max-width: 768px) {  width:120px; }
+                  display:inline;
+               }
+               .form-group{
+                     display:inline;
+                  }
+            }
+         }
+      }
+   }
+      .secondaryStripe{
+         background-color:@brand-secondary;
+         height:45px;
+      }
+      .alternateStripe{
+         background-color:@brand-alternate;
+         height:45px;
+      }
+ }
+
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content { }
+
+.highlightedFeatures {
+   @media screen and (max-width: 1100px) {  }
+   .headerText{
+      h2 {
+         text-align:center;
+      }
+   }
+   .row {
+      .col-sm-4{
+         img{
+            width:50%;
+            display: table;
+            margin: 0 auto;
+         }
+         h3 {
+         text-align:center;
+         }
+      }
+   }
+   .ctaText{
+      h2{
+         text-align:center;
+         a{
+            color:@brand-alternate;
+         }
+      }
+      padding-bottom:40px;
+      @media screen and (max-width: 1100px) {  padding-bottom:20px; }
+   }
+}
+
+.pastWork {
+         border-top-left-radius:30%;
+   margin-left: -15px;
+   margin-right: -15px;
+   background-color:@brand-alternate;
+   min-height:600px;
+   @media screen and (max-width: 1500px) {  
+      min-height:350px;
+   }
+   padding-bottom:25px;
+   .row {
+      .web ,.mobile{
+         margin-top:25px;
+         img{
+            @media screen and (min-width: 1500px) {  
+               max-height:350px;
+               display: table;
+               margin: 0 auto;
+            }
+            @media screen and (max-width: 1500px) {  
+               height:300px;
+               display: table;
+               margin: 0 auto;
+            }  
+         }
+      }
+      .web {
+         @media screen and (max-width: 1280px) and (min-width: 992px) {  
+            margin-left: -50px;         
+         }
+         img {
+            @media screen and (max-width: 991px) { 
+                  width:50%;
+                  height:auto;
+                  display: table;
+                  margin: 0 auto; 
+            }
+            @media screen and (max-width: 767px) { 
+                  width:80%;
+                  height:auto;
+                  display: table;
+                  margin: 0 auto; 
+            }
+         }
+      }
+      .pastWorkText{
+         margin-top: 150px;
+         @media screen and (max-width: 1500px) and (min-width: 1280px) {  
+            margin-top: 90px;
+         }
+         @media screen and (max-width: 1280px) {  
+            margin-top: 75px;
+            display: table;
+            margin: 75px auto 0 45px;
+            
+         }
+
+         @media screen and (max-width: 992px) {  
+            width:100%;
+            margin: 0 auto 0 0;
+         }
+         h2 {
+         text-align:center;
+         }
+         a{
+            color:@brand-alternate;
+            text-align:center;
+            font-size:1.8em;
+            display: table;
+            margin: 0 auto;
+         }
+      }
+   }
+}
+
+.whatClientsSay {
+   min-height:450px;
+   #carousel{
+      .carousel-indicators .active {
+         background-color:@brand-alternate;
+      }
+      .carousel-indicators li {
+         border-color:@brand-alternate;
+      }
+      margin-left: -15px;
+      margin-right: -15px;
+      min-height:450px;
+      @media screen and (max-width: 768px) { 
+         min-height:500px; 
+      }
+      @media screen and (max-width: 660px) { 
+         min-height:525px; 
+      }
+       @media screen and (max-width: 580px) { 
+         min-height:550px; 
+      }
+
+      @media screen and (max-width: 495px) { 
+         min-height:575px; 
+      }
+      @media screen and (max-width: 461px) { 
+         min-height:600px; 
+      }
+
+       @media screen and (max-width: 426px) { 
+         min-height:650px; 
+      }
+      .carousel-control{
+         background-image:none;
+         .glyphicon-chevron-left:before{
+            color:@brand-alternate;
+         }
+         .glyphicon-chevron-right:before{
+            color:@brand-alternate;
+         }
+      }
+      .carousel-inner{
+         .item{
+            margin: 25px auto;
+            img{
+               height:175px;
+               width:auto;
+               margin: 0 auto;
+            }
+            max-width: 70%;
+            h3 {
+               text-align:center;
+            }
+            .quote {
+               font-weight:300;
+            }
+         }
+      }
+   }
+}
+
+
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main { }
+
+/* Gallery Shortcode */
+.gallery-row { padding: 15px 0; }
+
+
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar { }
+
+
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry .byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.content-info {
+   .footerCallToAction {
+        background-color:@brand-secondary;
+        min-height:200px; 
+        color:white;
+        text-align:center;
+        h2{
+         padding-top:35px;
+         @media screen and (max-width: 450px) {  padding-top:15px; }
+         @media screen and (max-width: 992px) {  font-size:1.8em; }
+         @media screen and (max-width: 682px) {  font-size:1.6em; }
+        }
+        .form-inline{
+               text-align:center;
+               margin-top:25px;
+               margin-bottom:20px;
+               @media screen and (max-width: 450px) {  margin-bottom:10px; }
+               inline:block;
+               .ctaButton {
+                  background-color:@brand-alternate;
+                  color:white;
+               }
+               .form-control{
+                  border: 1px none #ccc;
+                  width:300px;
+                  @media screen and (max-width: 768px) {  width:150px; }
+                  display:inline;
+               }
+               .form-group{
+                     display:inline;
+               }
+         }
+   }
+   .footerMeetsCTA{
+      background-color:@brand-alternate;
+      height:45px;
+   }
+   .mainFooter {
+      background-color:@brand-main;
+      min-height:225px;
+      .footerLogo {
+
+            margin: 0 auto;
+            margin-top:25px;
+            @media screen and (max-width: 768px) { margin-top:50px; }
+            display: table;
+            table-layout: fixed;
+            float:none;
+            height:125px;
+      }
+      nav {
+         margin: 0 auto;
+         .navbar-nav{
+            margin: 0 auto;
+            display: table;
+            table-layout: fixed;
+            float:none;
+            li {
+               a {
+                  font-size:1.4em;
+                  color:white;
+               }
+            }
+         }
+      }
+   }
+ }
+
+
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (min-width: @screen-xs-min) { }
+@media (min-width: @screen-md-min) { }
+
+@media (min-width: @screen-lg-min) { }
